@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta dir="rtl">
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'shortit/style.css' %}">
+    </head>
+
+    <body>
+        <header class="header">
+            <h1>
+                <div class="d-flex justify-content-center">
+                    <div class="thumbnail">
+                      <a href="/shortit/">
+                        <img class="img-responsive" src="{% static 'shortit/images/logo.png' %}" alt="link shortener">
+                      </a>
+                    </div>
+                  </div>
+            </h1>
+        </header>
+        {% block content %}{% endblock content %}
+        <div class="row">
+            <div class="container">
+                <footer class="footer">
+                    <div class="col-sm-12">
+                        <div id="footer">
+                            <a href="{% url 'report' %}">گزارش تخلف</a> | <a href="{% url 'terms' %}">قوانین و مقررات</a> | <a href="">ارتباط با ما</a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

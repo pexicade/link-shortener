@@ -1,0 +1,21 @@
+{% extends 'shortit/base.html' %}
+{% block title %}پیوند کوتاه شده{% endblock title %}
+{% block content %}
+    <h3 dir="rtl" style="color :white;">
+    اینم پیوند کوتاه شده:
+    </h3>
+    <div class="textbox">
+        <label>http://127.0.0.1:8000/shortit/{{link}}</label>
+    </div>
+    <div>
+        <br>
+    </div>
+    <div class="col-3" style="margin: auto; width: 50%;">
+        <!-- <form action="{% url 'linkstats' link %}" method="GET"> -->
+            <!-- <input type="hidden" name="amar" value="hello">  -->
+            <!-- <button type="submit" class="btn btn-block btn-outline-warning" >آمار پیوند</button> -->
+            <a href="{% url 'linkstats' link %}" class="btn btn-block btn-outline-warning">آمار پیوند</a>
+        <!-- </form> -->
+    </div>
+    <br>
+{% endblock content %}

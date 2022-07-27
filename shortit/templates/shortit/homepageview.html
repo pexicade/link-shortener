@@ -1,0 +1,21 @@
+{% extends 'shortit/base.html' %}
+{% block title %}کوتاه کننده پیووند{% endblock title %}
+{% block content %}
+<form method="POST" action=".">
+    {% csrf_token %}
+    <div class="form-row p-4">
+        <div class="col-sm-4 mt-2">
+        </div>
+        <div class="col-sm-4 mt-2">
+            <!-- <input type="text" name="link" class="form-control" placeholder="لینک را وارد کنید"> -->
+            {{ form.org_link }}
+        </div>
+        <div class="col-sm-4 mt-2">
+        </div>
+        <div class="col-12 mt-4">
+            <button type="submit" name="submit" class="btn btn-outline-warning">کوتاه کن</button>
+        </div>
+    </div>
+</form>
+
+{% endblock content %}

@@ -1,0 +1,85 @@
+@font-face {
+    font-family: sanslight;
+    src: url('fonts/iransansmobile_light.ttf');
+}
+
+@font-face {
+    font-family: sansmedium;
+    src: url('fonts/iransansmobile_medium.ttf');
+}
+
+* {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sansmedium;
+}
+
+body{
+    background: url('images/bg.png') repeat #232a32;
+    font-family: sansmedium;
+}
+footer{
+    display: block;
+} 
+.footer{
+    margin-top: auto;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+}
+#footer a, #footer a:link, #footer a:active, #footer a:visited {
+    font-family: "sanslight";
+    font-size: large;
+    line-height: 2;
+    color: #ffc107;
+    text-decoration: none;
+    padding: 0 4px;
+}
+
+.textbox{
+    margin: auto;
+    width: 30%;
+    background-color: whitesmoke;
+    font-size: large;
+    text-align: center;
+    border: #ffc107 2px solid;
+    padding: 10;
+}
+
+table{
+    margin: auto;
+    width: 55%;
+}
+table, td, th{
+    color: white;
+    border: 1px solid lightblue;
+}
+
+article{
+    color: white;
+    direction: rtl;
+    background: rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 30px auto 27px;
+    width: 636px;
+    position: relative;
+}
+.header{
+    margin: 28px auto 0;
+    width: 300;
+    height: 120;
+}
+h1{
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+

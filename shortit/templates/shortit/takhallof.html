@@ -1,0 +1,39 @@
+{% extends 'shortit/base.html' %}
+{% block title %}گزارش تخلف{% endblock title %}
+{% block content %}
+<br>+
+
+<h2 style="color: white;"> &lt&lt گزارش تخلف &gt&gt </h2>
+{% if msg == "valid" %}
+    <div class="alert alert-success">
+        <strong>Success!</strong> Message Sent
+    </div>
+{% elif msg != "get" %}
+    <div class="alert alert-danger">
+        <strong>Error!</strong> Couldnt do it:
+        <br>
+        {{err}}
+    </div>
+{% endif %}
+<form method="POST" action=".">
+    {% csrf_token %}
+    <div class="form-row p-4">
+        <div class="col-sm-4 mt-2">
+        </div>
+        <div class="col-sm-4 mt-2">
+            {% for f in form %}
+            <p dir="rtl" style="color: white;">
+                {{f.label}} {{f}}
+            </p>
+            {% endfor%}
+            <button type="submit" name="submit" class="btn btn-outline-warning">ارسال فرم</button>
+        </div>
+        <div class="col-sm-4 mt-2">
+        </div>
+        <!-- <div class="col-12 mt-4">
+            
+        </div> -->
+    </div>
+</form>
+
+{% endblock content %}

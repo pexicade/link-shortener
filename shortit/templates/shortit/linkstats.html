@@ -1,0 +1,18 @@
+{% extends 'shortit/base.html' %}
+{% block title %}امار پیوند{% endblock title %}
+{% block content %}
+<br>
+<table>
+    <tr>
+        <th>آخرین بازدید</th>
+        <th>بازدید کل</th>
+        <th>تاریخ ایجاد</th>
+    </tr>
+    <tr>
+        <td>0</td>
+        <td>{{stats}}</td>
+        <td>{{created}}</td>    
+    </tr>
+</table>
+<br>
+{% endblock content %}
